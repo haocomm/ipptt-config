@@ -217,14 +217,14 @@
           <command action="voicetargetset" funcparamname="value" message="Set Voice Target" enabled="true"/>
           <command action="listapi" funcparamname="" message="List API" enabled="true"/>
         </http>
-        <mqtt enabled="false">
+        <mqtt enabled="true">
           <settings>
-            <mqttsubtopic>thailand/bangkok/company/talkkonnect</mqttsubtopic>
-            <mqttpubtopic>thailand/bangkok/company/talkkonnect</mqttpubtopic>
-            <mqttbroker>tcp://mqtt.yourserver.com:1883</mqttbroker>
-            <mqttpassword></mqttpassword>
-            <mqttuser></mqttuser>
-            <mqttid>talkkonnect002</mqttid>
+            <mqttsubtopic>thailand/bangkok/company/hgb-01-orangepi</mqttsubtopic>
+            <mqttpubtopic>thailand/bangkok/company/hgb-01-orangepi</mqttpubtopic>
+            <mqttbroker>tls://d49a85978e0c457a8b75b1dfc7a753b9.s1.eu.hivemq.cloud:8883</mqttbroker>
+            <mqttpassword>LBhxaNLN94HU8ATrBZ7s</mqttpassword>
+            <mqttuser>haocomm</mqttuser>
+            <mqttid>hgb-01-orangepi</mqttid>
             <cleansess>false</cleansess>
             <qos>0</qos>
             <num>1</num>

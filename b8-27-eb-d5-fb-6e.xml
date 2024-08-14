@@ -43,6 +43,87 @@
         </id>
       </voicetargets>
     </account>
+    <account name="community" default="true">
+      <serverandport>mtechlink.talkkonnect.com:64738</serverandport>
+      <username>haocomm-poc2-rpi3B</username>
+      <password></password>
+      <insecure>true</insecure>
+      <register>false</register>
+      <certificate></certificate>
+      <channel>HAM-CB</channel>
+      <ident>haocomm-poc-rpi3B</ident>
+	  <listentochannels>
+		<channel>talKKonnect</channel>
+	  </listentochannels>
+      <tokens enabled="true">
+        <token>111111</token>
+        <token>222222</token>
+      </tokens> 
+      <voicetargets>
+        <id value="0">
+            <user>suvir-demo</user>
+        </id>
+        <id value="1">
+          <users>
+            <user>suvir-ubunbtu</user>
+          </users>
+        </id>
+        <id value="2">
+          <users>
+            <user>suvir-demo</user>
+          </users>
+        </id>
+        <id value="3">
+          <channels>
+            <channel>
+              <name>TEST1</name>
+              <recursive>true</recursive>
+              <links>true</links>
+              <group>"all"</group>
+            </channel>
+          </channels>
+        </id>
+      </voicetargets>
+    </account>
+    <account name="cb245" default="true">
+      <serverandport>mumble.talkkonnect.com:64740</serverandport>
+      <username>haocomm-poc2-rpi3B</username>
+      <password></password>
+      <insecure>true</insecure>
+      <register>false</register>
+      <certificate></certificate>
+      <channel></channel>
+      <ident>haocomm-poc-rpi3B</ident>
+      <tokens enabled="false">
+        <token></token>
+        <token></token>
+      </tokens> 
+      <voicetargets>
+        <id value="0">
+            <user>suvir-demo</user>
+        </id>
+        <id value="1">
+          <users>
+            <user>suvir-ubunbtu</user>
+          </users>
+        </id>
+        <id value="2">
+          <users>
+            <user>suvir-demo</user>
+          </users>
+        </id>
+        <id value="3">
+          <channels>
+            <channel>
+              <name>TEST1</name>
+              <recursive>true</recursive>
+              <links>true</links>
+              <group>"all"</group>
+            </channel>
+          </channels>
+        </id>
+      </voicetargets>
+    </account>
   </accounts>
   <global>
     <software>
@@ -69,9 +150,9 @@
         <nextserverindex>0</nextserverindex>
         <txlockout>true</txlockout>
       </settings>
-      <autoprovisioning enabled="true">
-      <tkid>b8-27-eb-d5-fb-6e</tkid/
-        <url>http://mumble.haocomm.com:81/configuration/</url>
+      <autoprovisioning enabled="false">
+        <tkid/>
+        <url>http://provisioningserver.com</url>
         <savefilepath>/home/talkkonnect/gocode/src/github.com/talkkonnect/talkkonnect</savefilepath>
         <savefilename>talkkonnect.xml</savefilename>
       </autoprovisioning>

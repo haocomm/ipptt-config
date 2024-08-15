@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <document type="talkkonnect/xml">
   <accounts>
-     <account name="community" default="true">
+    <account name="community" default="true">
       <serverandport>mumble.haocomm.com:50000</serverandport>
       <username>poc2-rpi3</username>
       <password>0875109339</password>
       <insecure>true</insecure>
       <register>true</register>
-      <certificate></certificate>
+      <certificate/>
       <channel>HAM-CB</channel>
       <ident>haocomm-poc2-rpi3B</ident>
-	  <listentochannels>
-		<channel>talKKonnect</channel>
-	  </listentochannels>
+      <listentochannels>
+        <channel>talKKonnect</channel>
+      </listentochannels>
       <tokens enabled="true">
         <token>111111</token>
         <token>222222</token>
-      </tokens> 
+      </tokens>
       <voicetargets>
         <id value="0">
-            <user>suvir-demo</user>
+          <user>suvir-demo</user>
         </id>
         <id value="1">
           <users>
@@ -46,22 +46,22 @@
     <account name="community" default="true">
       <serverandport>mtechlink.talkkonnect.com:64738</serverandport>
       <username>haocomm-poc2-rpi3B</username>
-      <password></password>
+      <password/>
       <insecure>true</insecure>
       <register>false</register>
-      <certificate></certificate>
+      <certificate/>
       <channel>HAM-CB</channel>
       <ident>haocomm-poc-rpi3B</ident>
-	  <listentochannels>
-		<channel>talKKonnect</channel>
-	  </listentochannels>
+      <listentochannels>
+        <channel>talKKonnect</channel>
+      </listentochannels>
       <tokens enabled="true">
         <token>111111</token>
         <token>222222</token>
-      </tokens> 
+      </tokens>
       <voicetargets>
         <id value="0">
-            <user>suvir-demo</user>
+          <user>suvir-demo</user>
         </id>
         <id value="1">
           <users>
@@ -88,19 +88,19 @@
     <account name="cb245" default="true">
       <serverandport>mumble.talkkonnect.com:64740</serverandport>
       <username>haocomm-poc2-rpi3B</username>
-      <password></password>
+      <password/>
       <insecure>true</insecure>
       <register>false</register>
-      <certificate></certificate>
-      <channel></channel>
+      <certificate/>
+      <channel/>
       <ident>haocomm-poc-rpi3B</ident>
       <tokens enabled="false">
-        <token></token>
-        <token></token>
-      </tokens> 
+        <token/>
+        <token/>
+      </tokens>
       <voicetargets>
         <id value="0">
-            <user>suvir-demo</user>
+          <user>suvir-demo</user>
         </id>
         <id value="1">
           <users>
@@ -133,7 +133,7 @@
         <outputdeviceshort>Speaker</outputdeviceshort>
         <outputvolcontroldevice>Speaker</outputvolcontroldevice>
         <outputmutecontroldevice>Speaker</outputmutecontroldevice>
-         <inputdevice>Mic</inputdevice>
+        <inputdevice>Mic</inputdevice>
         <logfilenameandpath>/var/log/talkkonnect.log</logfilenameandpath>
         <logging>screenwithlineno</logging>
         <loglevel>debug</loglevel>
@@ -150,9 +150,9 @@
         <nextserverindex>0</nextserverindex>
         <txlockout>true</txlockout>
       </settings>
-      <autoprovisioning enabled="false">
-        <tkid/>
-        <url>http://provisioningserver.com</url>
+      <autoprovisioning enabled="true">
+        <tkid>b8-27-eb-d5-fb-6e</tkid>
+        <url>http://mumble.haocomm.com:81/configuration/</url>
         <savefilepath>/home/talkkonnect/gocode/src/github.com/talkkonnect/talkkonnect</savefilepath>
         <savefilename>talkkonnect.xml</savefilename>
       </autoprovisioning>
@@ -273,9 +273,12 @@
           <command action="mute-toggle" funcparamname="toggle" message="Mute-Toggle" enabled="true"/>
           <command action="mute" funcparamname="mute" message="Mute" enabled="true"/>
           <command action="unmute" funcparamname="unmute" message="Unute" enabled="true"/>
-          <command action="currentvolume" funcparamname="" message="Current Volume" enabled="true"/>
-          <command action="volumeup" funcparamname="" message="Volume Up" enabled="true"/>
-          <command action="volumedown" funcparamname="" message="Volume Down" enabled="true"/>
+          <command action="currentrxvolume" funcparamname="" message="Current Volume" enabled="true"/>
+          <command action="volumerxup" funcparamname="" message="Volume Up" enabled="true"/>
+          <command action="volumerxdown" funcparamname="" message="Volume Down" enabled="true"/>
+          <command action="currenttxvolume" funcparamname="" message="Current Volume" enabled="true"/>
+          <command action="volumetxup" funcparamname="" message="Volume Up" enabled="true"/>
+          <command action="volumetxdown" funcparamname="" message="Volume Down" enabled="true"/>																						
           <command action="listserverchannels" funcparamname="" message="List Channels" enabled="true"/>
           <command action="starttransmitting" funcparamname="" message="Start Transmitting" enabled="true"/>
           <command action="stoptransmitting" funcparamname="" message="Stop Transmitting" enabled="true"/>
@@ -298,14 +301,14 @@
           <command action="voicetargetset" funcparamname="value" message="Set Voice Target" enabled="true"/>
           <command action="listapi" funcparamname="" message="List API" enabled="true"/>
         </http>
-        <mqtt enabled="false">
+        <mqtt enabled="true">
           <settings>
-            <mqttsubtopic>thailand/bangkok/company/talkkonnect</mqttsubtopic>
-            <mqttpubtopic>thailand/bangkok/company/talkkonnect</mqttpubtopic>
-            <mqttbroker>tcp://mqtt.yourserver.com:1883</mqttbroker>
-            <mqttpassword></mqttpassword>
-            <mqttuser></mqttuser>
-            <mqttid>talkkonnect002</mqttid>
+            <mqttsubtopic>media/intercom/setup/HA-POC2-RPI3/deviceRole</mqttsubtopic>
+            <mqttpubtopic>media/intercom/#</mqttpubtopic>
+            <mqttbroker>tcp://mumble.haocomm.com:1883</mqttbroker>
+            <mqttpassword>0875109339</mqttpassword>
+            <mqttuser>ha-poc2-rpi3</mqttuser>
+            <mqttid>ha-poc2-rpi3</mqttid>
             <cleansess>false</cleansess>
             <qos>0</qos>
             <num>1</num>
@@ -324,9 +327,12 @@
             <command action="channelup" message="Channel Up" enabled="true"/>
             <command action="channeldown" message="Channel Down" enabled="true"/>
             <command action="muteunmute" message="Mute-Toggle" enabled="true"/>
-            <command action="currentvolume" message="Current Volume" enabled="true"/>
-            <command action="volumeup" message="Volume Up" enabled="true"/>
-            <command action="volumedown" message="Volume Down" enabled="true"/>
+            <command action="currentrxvolume" message="Current Volume" enabled="true"/>
+            <command action="volumerxup" message="Volume Up" enabled="true"/>
+            <command action="volumerxdown" message="Volume Down" enabled="true"/>
+            <command action="currenttxvolume" message="Current Volume" enabled="true"/>
+            <command action="volumetxup" message="Volume Up" enabled="true"/>
+            <command action="volumetxdown" message="Volume Down" enabled="true"/>																			 
             <command action="listserverchannels" message="List Channels" enabled="true"/>
             <command action="starttransmitting" message="Start Transmitting" enabled="true"/>
             <command action="stoptransmitting" message="Stop Transmitting" enabled="true"/>
@@ -400,11 +406,11 @@
       <ignoreuser enabled="true">
         <ignoreuserregex>^(suvirsony)$</ignoreuserregex>
       </ignoreuser>
-     <memorychannels>
+      <memorychannels>
         <channel gpioname="memorychannel1" channelname="HAM-CB" enabled="true"/>
         <channel gpioname="memorychannel2" channelname="BABY-ROOM" enabled="true"/>
         <channel gpioname="memorychannel3" channelname="talKKonnect" enabled="true"/>
-     </memorychannels>
+      </memorychannels>
     </software>
     <hardware targetboard="rpi">
       <ledstripenabled>true</ledstripenabled>
@@ -415,37 +421,37 @@
         </gpioexpander>
         <max7219 max7219cascaded="1" spibus="0" spidevice="0" brightness="7" enabled="false"/>
         <pins>
-          <pin direction="output" device="led/relay"     name="voiceactivity" pinno="5" type="gpio" chipid="0"  enabled="true"/>
-          <pin direction="output" device="led/relay"     name="participants" pinno="6" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="output" device="led/relay"     name="transmit" pinno="22" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="output" device="led/relay"     name="online" pinno="13" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="output" device="led/relay"     name="attention" pinno="19" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="output" device="led/relay"     name="voicetarget" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="output" device="led/relay"     name="heartbeat" pinno="26" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="output" device="lcd"           name="backlight" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="output" device="led/relay"     name="relay0" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="output" device="radiomodule"   name="powerdown" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="output" device="radiomodule"   name="txpower" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="txptt" pinno="17" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="txtoggle" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="channelup" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="channeldown" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="panic" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton"    name="streamtoggle" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="toggleswitch"  name="comment" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="rotaryencoder" name="rotarya" pinno="17" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="rotaryencoder" name="rotaryb" pinno="18" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="rotaryencoder" name="rotarybutton" pinno="27" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="pushbutton" name="volup" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton" name="voldown" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="toggleswitch" name="tracking" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton" name="mqtt0" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton" name="mqtt1" pinno="0" type="gpio" chipid="0" enabled="false"/>
-          <pin direction="input"  device="pushbutton" name="nextserver" pinno="23" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="pushbutton" name="memorychannel1" pinno="12" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="pushbutton" name="memorychannel2" pinno="25" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="pushbutton" name="memorychannel3" pinno="24" type="gpio" chipid="0" enabled="true"/>
-          <pin direction="input"  device="repeatertone" name="" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="output" device="led/relay" name="voiceactivity" pinno="5" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="led/relay" name="participants" pinno="6" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="led/relay" name="transmit" pinno="22" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="led/relay" name="online" pinno="13" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="led/relay" name="attention" pinno="19" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="led/relay" name="voicetarget" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="output" device="led/relay" name="heartbeat" pinno="26" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="output" device="lcd" name="backlight" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="output" device="led/relay" name="relay0" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="output" device="radiomodule" name="powerdown" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="output" device="radiomodule" name="txpower" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="txptt" pinno="17" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="txtoggle" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="channelup" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="channeldown" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="panic" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="streamtoggle" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="toggleswitch" name="comment" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="rotaryencoder" name="rotarya" pinno="17" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="rotaryencoder" name="rotaryb" pinno="18" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="rotaryencoder" name="rotarybutton" pinno="27" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="pushbutton" name="volup" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="voldown" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="toggleswitch" name="tracking" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="mqtt0" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="mqtt1" pinno="0" type="gpio" chipid="0" enabled="false"/>
+          <pin direction="input" device="pushbutton" name="nextserver" pinno="23" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="pushbutton" name="memorychannel1" pinno="12" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="pushbutton" name="memorychannel2" pinno="25" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="pushbutton" name="memorychannel3" pinno="24" type="gpio" chipid="0" enabled="true"/>
+          <pin direction="input" device="repeatertone" name="" pinno="0" type="gpio" chipid="0" enabled="false"/>
         </pins>
         <rotaryencoder enabled="true">
           <control function="localvolume" enabled="true"/>
@@ -481,7 +487,7 @@
         <lcdd6pin>23</lcdd6pin>
         <lcdd7pin>18</lcdd7pin>
       </lcd>
-    <oled enabled="true">
+      <oled enabled="true">
         <oledinterfacetype>i2c</oledinterfacetype>
         <oleddisplayrows>9</oleddisplayrows>
         <oleddisplaycolumns>20</oleddisplaycolumns>
@@ -559,13 +565,17 @@
         <numlockscanid>69</numlockscanid>
       </usbkeyboard>
       <keyboard>
-       <command action="soundinterfacepttkey" paramname="" paramvalue="" enabled="true">
+        <command action="soundinterfacepttkey" paramname="" paramvalue="" enabled="true">
           <ttykeyboard scanid="115" keylabel="0" enabled="true"/>
           <usbkeyboard scanid="115" keylabel="0" enabled="true"/>
         </command>
         <command action="channeldown" paramname="" paramvalue="" enabled="false">
           <ttykeyboard scanid="49" keylabel="1" enabled="true"/>
           <usbkeyboard scanid="79" keylabel="1" enabled="true"/>
+				  
+																				 
+																
+																
         </command>
         <command action="serverup" paramname="" paramvalue="" enabled="false">
           <ttykeyboard scanid="50" keylabel="2" enabled="true"/>
@@ -614,7 +624,7 @@
         <command action="voicetargetset" paramname="voicetargetset" paramvalue="8" enabled="true"/>
         <command action="voicetargetset" paramname="voicetargetset" paramvalue="9" enabled="true"/>
       </keyboard>
-    	<radio enabled="false">
+      <radio enabled="false">
         <connectchannelid>01</connectchannelid>
         <sa818 enabled="false">
           <serial enabled="false">
@@ -662,7 +672,7 @@
             </channel>
           </channels>
         </sa818>
-    	</radio>
+      </radio>
     </hardware>
     <multimedia>
       <id value="0" enabled="true">
